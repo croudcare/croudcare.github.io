@@ -1602,7 +1602,7 @@ webpackJsonp([1],{
 	            _react2['default'].createElement(
 	              'h3',
 	              { className: 'panel-title' },
-	              'Add it right before the method you want to inject your props into'
+	              'Add it right before the method you want to stop and prevent its event'
 	            )
 	          ),
 	          _react2['default'].createElement(
