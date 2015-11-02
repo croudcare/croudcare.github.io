@@ -13,7 +13,7 @@ webpackJsonp([1],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _src = __webpack_require__(29);
+	var _src = __webpack_require__(22);
 
 	var _src2 = _interopRequireDefault(_src);
 
@@ -47,7 +47,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 29:
+/***/ 22:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/goncalvesjoao/react-projects/relpers/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/goncalvesjoao/react-projects/relpers/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -894,7 +894,7 @@ webpackJsonp([1],{
 
 	var _Prism2 = _interopRequireDefault(_Prism);
 
-	var _src = __webpack_require__(29);
+	var _src = __webpack_require__(22);
 
 	var FormExample = _react2['default'].createClass({
 	  displayName: 'FormExample',
@@ -996,7 +996,15 @@ webpackJsonp([1],{
 
 	'use strict';
 
+	var _createDecoratedClass = (function () { function defineProperties(target, descriptors, initializers) { for (var i = 0; i < descriptors.length; i++) { var descriptor = descriptors[i]; var decorators = descriptor.decorators; var key = descriptor.key; delete descriptor.key; delete descriptor.decorators; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor || descriptor.initializer) descriptor.writable = true; if (decorators) { for (var f = 0; f < decorators.length; f++) { var decorator = decorators[f]; if (typeof decorator === 'function') { descriptor = decorator(target, key, descriptor) || descriptor; } else { throw new TypeError('The decorator for method ' + descriptor.key + ' is of the invalid type ' + typeof decorator); } } if (descriptor.initializer !== undefined) { initializers[key] = descriptor; continue; } } Object.defineProperty(target, key, descriptor); } } return function (Constructor, protoProps, staticProps, protoInitializers, staticInitializers) { if (protoProps) defineProperties(Constructor.prototype, protoProps, protoInitializers); if (staticProps) defineProperties(Constructor, staticProps, staticInitializers); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _react = __webpack_require__(1);
 
@@ -1006,7 +1014,111 @@ webpackJsonp([1],{
 
 	var _Prism2 = _interopRequireDefault(_Prism);
 
-	// import { injectProps } from '../../../../../src';
+	var _src = __webpack_require__(22);
+
+	var Profile1 = (function (_React$Component) {
+	  _inherits(Profile1, _React$Component);
+
+	  function Profile1() {
+	    _classCallCheck(this, Profile1);
+
+	    _get(Object.getPrototypeOf(Profile1.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createDecoratedClass(Profile1, [{
+	    key: 'render',
+	    decorators: [_src.injectProps],
+	    value: function render(_ref) {
+	      var firstName = _ref.firstName;
+	      var lastName = _ref.lastName;
+	      var email = _ref.email;
+
+	      return _react2['default'].createElement(
+	        'p',
+	        null,
+	        firstName,
+	        ' ',
+	        lastName,
+	        ' - ',
+	        email
+	      );
+	    }
+	  }]);
+
+	  return Profile1;
+	})(_react2['default'].Component);
+
+	var Profile2 = (function (_React$Component2) {
+	  _inherits(Profile2, _React$Component2);
+
+	  function Profile2() {
+	    _classCallCheck(this, Profile2);
+
+	    _get(Object.getPrototypeOf(Profile2.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createDecoratedClass(Profile2, [{
+	    key: 'fullName',
+	    decorators: [_src.injectProps],
+	    value: function fullName(seperator, _ref2) {
+	      var firstName = _ref2.firstName;
+	      var lastName = _ref2.lastName;
+
+	      return lastName + seperator + firstName;
+	    }
+	  }, {
+	    key: 'render',
+	    decorators: [_src.injectProps],
+	    value: function render(_ref3) {
+	      var email = _ref3.email;
+
+	      return _react2['default'].createElement(
+	        'p',
+	        null,
+	        this.fullName(', '),
+	        ' - ',
+	        email
+	      );
+	    }
+	  }]);
+
+	  return Profile2;
+	})(_react2['default'].Component);
+
+	var Profile3 = (function (_React$Component3) {
+	  _inherits(Profile3, _React$Component3);
+
+	  function Profile3() {
+	    _classCallCheck(this, Profile3);
+
+	    _get(Object.getPrototypeOf(Profile3.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createDecoratedClass(Profile3, [{
+	    key: 'fullName',
+	    value: function fullName(seperator, firstName, lastName) {
+	      return firstName + seperator + lastName;
+	    }
+	  }, {
+	    key: 'render',
+	    decorators: [_src.injectProps],
+	    value: function render(_ref4) {
+	      var firstName = _ref4.firstName;
+	      var lastName = _ref4.lastName;
+	      var email = _ref4.email;
+
+	      return _react2['default'].createElement(
+	        'p',
+	        null,
+	        this.fullName(', ', firstName, lastName),
+	        ' - ',
+	        email
+	      );
+	    }
+	  }]);
+
+	  return Profile3;
+	})(_react2['default'].Component);
 
 	var InjectPropsExample = _react2['default'].createClass({
 	  displayName: 'InjectPropsExample',
@@ -1037,13 +1149,13 @@ webpackJsonp([1],{
 	            _react2['default'].createElement(
 	              'h3',
 	              { className: 'panel-title' },
-	              'Default mode'
+	              'Add it right before the method you want to inject your props into'
 	            )
 	          ),
 	          _react2['default'].createElement(
 	            'div',
 	            { className: 'panel-body' },
-	            '@injectProps'
+	            _react2['default'].createElement(Profile1, { firstName: 'John', lastName: 'Snow', email: 'john.snow@gmail.com' })
 	          ),
 	          _react2['default'].createElement(
 	            'div',
@@ -1056,7 +1168,79 @@ webpackJsonp([1],{
 	            _react2['default'].createElement(
 	              _Prism2['default'],
 	              { className: 'language-jsx' },
-	              '@injectProps'
+	              'class Profile extends React.Component {\n\n  @injectProps\n  render({ firstName, lastName, email }) {\n    return <p>{ firstName } { lastName } - { email }</p>;\n  }\n\n}\n\n<Profile firstName="John" lastName="Snow" email="john.snow@gmail.com" />'
+	            )
+	          )
+	        )
+	      ),
+	      _react2['default'].createElement(
+	        'section',
+	        null,
+	        _react2['default'].createElement(
+	          'div',
+	          { className: 'panel panel-default' },
+	          _react2['default'].createElement(
+	            'div',
+	            { className: 'panel-heading' },
+	            _react2['default'].createElement(
+	              'h3',
+	              { className: 'panel-title' },
+	              'Works also, with methods that receive arguments'
+	            )
+	          ),
+	          _react2['default'].createElement(
+	            'div',
+	            { className: 'panel-body' },
+	            _react2['default'].createElement(Profile2, { firstName: 'John', lastName: 'Snow', email: 'john.snow@gmail.com' })
+	          ),
+	          _react2['default'].createElement(
+	            'div',
+	            { className: 'panel-footer' },
+	            _react2['default'].createElement(
+	              'span',
+	              { className: 'label label-default' },
+	              'Code:'
+	            ),
+	            _react2['default'].createElement(
+	              _Prism2['default'],
+	              { className: 'language-jsx' },
+	              'class Profile extends React.Component {\n  @injectProps\n  fullName(seperator, { firstName, lastName }) {\n    return firstName + seperator + lastName;\n  }\n\n  @injectProps\n  render({ email }) {\n    return <p>{ this.fullName(\', \') } - { email }</p>;\n  }\n}\n\n<Profile firstName="John" lastName="Snow" email="john.snow@gmail.com" />'
+	            )
+	          )
+	        )
+	      ),
+	      _react2['default'].createElement(
+	        'section',
+	        null,
+	        _react2['default'].createElement(
+	          'div',
+	          { className: 'panel panel-default' },
+	          _react2['default'].createElement(
+	            'div',
+	            { className: 'panel-heading' },
+	            _react2['default'].createElement(
+	              'h3',
+	              { className: 'panel-title' },
+	              'No need to overuse it: Use it on your render method and pass the necessary props as arguments.'
+	            )
+	          ),
+	          _react2['default'].createElement(
+	            'div',
+	            { className: 'panel-body' },
+	            _react2['default'].createElement(Profile3, { firstName: 'John', lastName: 'Snow', email: 'john.snow@gmail.com' })
+	          ),
+	          _react2['default'].createElement(
+	            'div',
+	            { className: 'panel-footer' },
+	            _react2['default'].createElement(
+	              'span',
+	              { className: 'label label-default' },
+	              'Code:'
+	            ),
+	            _react2['default'].createElement(
+	              _Prism2['default'],
+	              { className: 'language-jsx' },
+	              'class Profile extends React.Component {\n  fullName(seperator, firstName, lastName) {\n    return firstName + seperator + lastName;\n  }\n\n  @injectProps\n  render({ firstName, lastName, email }) {\n    return <p>{ this.fullName(\', \', firstName, lastName) } - { email }</p>;\n  }\n}\n\n<Profile firstName="John" lastName="Snow" email="john.snow@gmail.com" />'
 	            )
 	          )
 	        )
@@ -1089,7 +1273,7 @@ webpackJsonp([1],{
 
 	var _Prism2 = _interopRequireDefault(_Prism);
 
-	var _src = __webpack_require__(29);
+	var _src = __webpack_require__(22);
 
 	var userWithErrors = {
 	  id: 1,
@@ -1296,7 +1480,15 @@ webpackJsonp([1],{
 
 	'use strict';
 
+	var _createDecoratedClass = (function () { function defineProperties(target, descriptors, initializers) { for (var i = 0; i < descriptors.length; i++) { var descriptor = descriptors[i]; var decorators = descriptor.decorators; var key = descriptor.key; delete descriptor.key; delete descriptor.decorators; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor || descriptor.initializer) descriptor.writable = true; if (decorators) { for (var f = 0; f < decorators.length; f++) { var decorator = decorators[f]; if (typeof decorator === 'function') { descriptor = decorator(target, key, descriptor) || descriptor; } else { throw new TypeError('The decorator for method ' + descriptor.key + ' is of the invalid type ' + typeof decorator); } } if (descriptor.initializer !== undefined) { initializers[key] = descriptor; continue; } } Object.defineProperty(target, key, descriptor); } } return function (Constructor, protoProps, staticProps, protoInitializers, staticInitializers) { if (protoProps) defineProperties(Constructor.prototype, protoProps, protoInitializers); if (staticProps) defineProperties(Constructor, staticProps, staticInitializers); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _react = __webpack_require__(1);
 
@@ -1306,10 +1498,83 @@ webpackJsonp([1],{
 
 	var _Prism2 = _interopRequireDefault(_Prism);
 
-	// import { killEvent } from '../../../../../src';
+	var _src = __webpack_require__(22);
 
-	var KillEventExample = _react2['default'].createClass({
-	  displayName: 'KillEventExample',
+	var DownloadButton = (function (_React$Component) {
+	  _inherits(DownloadButton, _React$Component);
+
+	  function DownloadButton() {
+	    _classCallCheck(this, DownloadButton);
+
+	    _get(Object.getPrototypeOf(DownloadButton.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createDecoratedClass(DownloadButton, [{
+	    key: 'onDownloadClick',
+	    decorators: [_src.killEvent],
+	    value: function onDownloadClick() {
+	      this.props.onDownloadClick();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2['default'].createElement(
+	        'button',
+	        { onClick: this.onDownloadClick.bind(this) },
+	        'click me'
+	      );
+	    }
+	  }]);
+
+	  return DownloadButton;
+	})(_react2['default'].Component);
+
+	var App = (function (_React$Component2) {
+	  _inherits(App, _React$Component2);
+
+	  function App() {
+	    _classCallCheck(this, App);
+
+	    _get(Object.getPrototypeOf(App.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createDecoratedClass(App, [{
+	    key: 'onDownloadClick',
+
+	    /*eslint-disable */
+	    value: function onDownloadClick() {
+	      alert('DownloadButton as been clicked!');
+	    }
+	  }, {
+	    key: 'onLinkClick',
+	    decorators: [_src.killEvent],
+	    value: function onLinkClick() {
+	      alert('Link as been clicked!');
+	    }
+
+	    /*eslint-enable */
+
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2['default'].createElement(
+	        'a',
+	        { href: '#', onClick: this.onLinkClick },
+	        _react2['default'].createElement(
+	          'span',
+	          null,
+	          'Notice that your browser\'s url is not being updated with a\'s href "#" in it.'
+	        ),
+	        _react2['default'].createElement(DownloadButton, { onDownloadClick: this.onDownloadClick })
+	      );
+	    }
+	  }]);
+
+	  return App;
+	})(_react2['default'].Component);
+
+	var killEventExample = _react2['default'].createClass({
+	  displayName: 'killEventExample',
 
 	  render: function render() {
 	    return _react2['default'].createElement(
@@ -1337,13 +1602,13 @@ webpackJsonp([1],{
 	            _react2['default'].createElement(
 	              'h3',
 	              { className: 'panel-title' },
-	              'Default mode'
+	              'Add it right before the method you want to inject your props into'
 	            )
 	          ),
 	          _react2['default'].createElement(
 	            'div',
 	            { className: 'panel-body' },
-	            '@killEvent'
+	            _react2['default'].createElement(App, null)
 	          ),
 	          _react2['default'].createElement(
 	            'div',
@@ -1356,7 +1621,7 @@ webpackJsonp([1],{
 	            _react2['default'].createElement(
 	              _Prism2['default'],
 	              { className: 'language-jsx' },
-	              '@killEvent'
+	              'class DownloadButton extends React.Component {\n  @killEvent\n  onDownloadClick() { this.props.onDownloadClick(); }\n\n  render() {\n    return <button onClick={ this.onDownloadClick.bind(this) }>click me</button>;\n  }\n}\n\nclass App extends React.Component {\n  onDownloadClick() { alert(\'DownloadButton as been clicked!\'); }\n\n  @killEvent\n  onLinkClick() { alert(\'Link as been clicked!\'); }\n\n  render() {\n    return (\n      <a href="#" onClick={ this.onLinkClick }>\n        <span>Notice that your browser\'s URL is not being updated with "#" in it.</span>\n        <DownloadButton onDownloadClick={ this.onDownloadClick } />\n      </a>\n    );\n  }\n}'
 	            )
 	          )
 	        )
@@ -1366,7 +1631,7 @@ webpackJsonp([1],{
 
 	});
 
-	module.exports = KillEventExample;
+	module.exports = killEventExample;
 
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/goncalvesjoao/react-projects/relpers/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "KillEventExample.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
@@ -1389,7 +1654,7 @@ webpackJsonp([1],{
 
 	var _Prism2 = _interopRequireDefault(_Prism);
 
-	var _src = __webpack_require__(29);
+	var _src = __webpack_require__(22);
 
 	var EmptyCompoment = _react2['default'].createClass({
 	  displayName: 'EmptyCompoment',
@@ -1724,7 +1989,7 @@ webpackJsonp([1],{
 
 	var _Prism2 = _interopRequireDefault(_Prism);
 
-	var _src = __webpack_require__(29);
+	var _src = __webpack_require__(22);
 
 	var loadingData = [];
 	loadingData.loading = true;
@@ -1957,7 +2222,7 @@ webpackJsonp([1],{
 
 	var _Prism2 = _interopRequireDefault(_Prism);
 
-	var _src = __webpack_require__(29);
+	var _src = __webpack_require__(22);
 
 	var SpinnerExample = _react2['default'].createClass({
 	  displayName: 'SpinnerExample',
@@ -2192,7 +2457,7 @@ webpackJsonp([1],{
 
 	var _Prism2 = _interopRequireDefault(_Prism);
 
-	var _src = __webpack_require__(29);
+	var _src = __webpack_require__(22);
 
 	var Home = (function (_React$Component) {
 	  _inherits(Home, _React$Component);
@@ -2359,7 +2624,7 @@ webpackJsonp([1],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _src = __webpack_require__(29);
+	var _src = __webpack_require__(22);
 
 	var author = '<package.json:author>';
 
@@ -2450,7 +2715,7 @@ webpackJsonp([1],{
 
 	var _reactCssModules2 = _interopRequireDefault(_reactCssModules);
 
-	var _src = __webpack_require__(29);
+	var _src = __webpack_require__(22);
 
 	var Header = (function (_React$Component) {
 	  _inherits(Header, _React$Component);
@@ -3129,7 +3394,11 @@ webpackJsonp([1],{
 	  var oldFunction = descriptor.value;
 
 	  descriptor.value = function propsInjectorFunction() {
-	    return oldFunction.bind(this)(this.props);
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+
+	    return oldFunction.bind(this).apply(undefined, args.concat([this.props]));
 	  };
 
 	  return descriptor;
